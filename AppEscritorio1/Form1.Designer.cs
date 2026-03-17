@@ -36,19 +36,25 @@
             // LabelNombre
             // 
             this.LabelNombre.AutoSize = true;
+            this.LabelNombre.BackColor = System.Drawing.Color.MintCream;
+            this.LabelNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LabelNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LabelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.LabelNombre.ForeColor = System.Drawing.Color.Black;
             this.LabelNombre.Location = new System.Drawing.Point(326, 162);
             this.LabelNombre.Name = "LabelNombre";
-            this.LabelNombre.Size = new System.Drawing.Size(191, 25);
+            this.LabelNombre.Size = new System.Drawing.Size(193, 27);
             this.LabelNombre.TabIndex = 0;
             this.LabelNombre.Text = "Ingrese su nombre";
             this.LabelNombre.Click += new System.EventHandler(this.label1_Click);
+            this.LabelNombre.MouseLeave += new System.EventHandler(this.LabelNombre_MouseLeave);
+            this.LabelNombre.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LabelNombre_MouseMove);
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(250, 204);
+            this.txtNombre.MaxLength = 32;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(320, 30);
             this.txtNombre.TabIndex = 1;
@@ -56,13 +62,15 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.Color.MintCream;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(350, 254);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(120, 40);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.button1_Click);
             // 
             // AppEscritorio1
@@ -78,9 +86,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AppEscritorio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppEscritorio1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppEscritorio1_FormClosed);
+            this.Load += new System.EventHandler(this.AppEscritorio1_Load);
+            this.Click += new System.EventHandler(this.AppEscritorio1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
